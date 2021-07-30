@@ -1,0 +1,2 @@
+enemy - power 100, agility - 150
+hero -  power 50, agility - 250
