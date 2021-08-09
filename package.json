@@ -1,0 +1,27 @@
+{
+  "name": "gl-node-react-tutorial",
+  "version": "1.0.0",
+  "description": "NodeJS tutorials",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inna-i/gl-node-react-tutorial.git"
+  },
+  "keywords": [
+    "tutorials",
+    "gl",
+    "nodejs"
+  ],
+  "author": "inna-i",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inna-i/gl-node-react-tutorial/issues"
+  },
+  "homepage": "https://github.com/inna-i/gl-node-react-tutorial#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
