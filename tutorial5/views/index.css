@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background: #d5fff5;
+}
+
+.root-page {
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    padding: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #60676d;
+}
+
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 30px 15px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+a:hover {
+    background: #059d79;
+}
