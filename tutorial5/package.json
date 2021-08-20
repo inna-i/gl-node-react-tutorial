@@ -1,0 +1,36 @@
+{
+  "name": "ssr",
+  "version": "1.0.0",
+  "description": "SSR React and Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon ./server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inna-i/gl-node-react-tutorial.git"
+  },
+  "keywords": [
+    "tutorials",
+    "gl",
+    "nodejs"
+  ],
+  "author": "inna-i",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inna-i/gl-node-react-tutorial/issues"
+  },
+  "homepage": "https://github.com/inna-i/gl-node-react-tutorial#readme",
+  "dependencies": {
+    "@react-ssr/core": "^0.24.0",
+    "@react-ssr/express": "^0.24.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
