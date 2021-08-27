@@ -1,0 +1,31 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// The current database to use.
+use('brewCoffee');
+
+// Create a new index in the collection.
+db.getCollection('products')
+    // .findOne({ "_id": 1 });
+    .insertOne(
+        { "_id": "1", "type": "Espresso", "price": 35, "quantity": 100 }
+    );
+    // .deleteOne(
+    //     { "_id": "1" }
+    // );
+  // .insertMany([
+    // { "_id" : "1", "type" : "Cappuccino", "price" : 35, "quantity" : 100 },
+    // { "_id" : "2", "type" : "Macchiato", "price" : 40, "quantity" : 100 },
+    // { "_id" : "3", "type" : "Espresso", "price" : 30, "quantity" : 100 },
+    // { "_id" : 4, "type" : "Latte", "price" : 35, "quantity" : 100 },
+    // { "_id" : 5, "type" : "Americano", "price" : 35, "quantity" : 100 },
+  //   { "_id" : 6, "type" : "Flat White", "price" : 35, "quantity" : 100 },
+  //   { "_id" : 7, "type" : "Irish Coffee", "price" : 35, "quantity" : 100 },
+  //   { "_id" : 8, "type" : "Cold Brew", "price" : 35, "quantity" : 100 }
+  // ]);
+
+// curl:
+// POST
+// curl -d "_id=2&type=Macchiato&price=35&quantity=30" -X POST http://localhost:3000/api/products
+// PUT
+// curl -d "type=Macchiato&price=45&quantity=30" -X PUT http://localhost:3000/api/products/2
