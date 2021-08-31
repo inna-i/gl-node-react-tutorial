@@ -5,11 +5,13 @@
 use('brewCoffee');
 
 // Create a new index in the collection.
-db.getCollection('products')
-    .findOne({ "_id": "7" });
-    // .insertOne(
-    //     { "_id": "1", "type": "Espresso", "price": 35, "quantity": 100 }
-    // );
+db.getCollection('orders')
+    // .findOne({ "_id": "7" });
+    .insertMany([
+        { "email": "test@gmail.com", "adress": "vul. Maidan, 101", "order": [{"type": "Espresso", "price": 35, "quantity": 100}] }, 
+        { "email": "name@gmail.com", "adress": "vul. Horodotska, 101", "order": [{"type": "Espresso", "price": 25, "quantity": 1}] },
+        { "email": "surname@gmail.com", "adress": "vul. Shyroka, 24", "order": [{"type": "Cappuccino", "price": 35, "quantity": 5}] }
+    ]);
     // .deleteOne(
     //     { "_id": "1" }
     // );
@@ -29,3 +31,7 @@ db.getCollection('products')
 // curl -d "_id=9&type=Mokka&price=35&quantity=30" -X POST http://localhost:3000/api/products
 // PUT
 // curl -d "type=Macchiato&price=45&quantity=30" -X PUT http://localhost:3000/api/products/2
+// DELETE
+// curl -X DELETE http://localhost:8080/api/orders/612e2934abec9a81efbbb0fe
+// POST for order
+//  curl -d "email=test@gmail.com&adress=vul. Shyroka, 21&order=[]" -X POST http://localhost:8080/api/orders

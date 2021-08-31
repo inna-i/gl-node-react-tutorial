@@ -1,7 +1,8 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import OrderContext from '../context/OrderContext';
 import Navigation from './Navigation';
 import Quotes from './Quotes';
+import { useEffect } from 'react';
 
 import latteImg from '../images/latte.png';
 import cappuccinoImg from '../images/cappuccino.png';
@@ -13,16 +14,16 @@ import mochaImg from '../images/mocha.png';
 import './CoffeeDrinks.css';
 
 // TODO use API
-const drinks = [
-	{ _id: '1', type: 'Cappuccino', price: 35, quantity: 100 },
-	{ _id: '2', type: 'Macchiato', price: 40, quantity: 100 },
-	{ _id: '3', type: 'Espresso', price: 30, quantity: 100 },
-	{ _id: '4', type: 'Latte', price: 35, quantity: 100 },
-	{ _id: '5', type: 'Americano', price: 35, quantity: 100 },
-	{ _id: '6', type: 'Flat White', price: 35, quantity: 100 },
-	{ _id: '7', type: 'Irish Coffee', price: 35, quantity: 100 },
-	{ _id: '8', type: 'Cold Brew', price: 35, quantity: 100 },
-];
+// const drinks = [
+// 	{ _id: '1', type: 'Cappuccino', price: 35, quantity: 100 },
+// 	{ _id: '2', type: 'Macchiato', price: 40, quantity: 100 },
+// 	{ _id: '3', type: 'Espresso', price: 30, quantity: 100 },
+// 	{ _id: '4', type: 'Latte', price: 35, quantity: 100 },
+// 	{ _id: '5', type: 'Americano', price: 35, quantity: 100 },
+// 	{ _id: '6', type: 'Flat White', price: 35, quantity: 100 },
+// 	{ _id: '7', type: 'Irish Coffee', price: 35, quantity: 100 },
+// 	{ _id: '8', type: 'Cold Brew', price: 35, quantity: 100 },
+// ];
 
 const getImgSrc = type => {
 	const imgSrcs = {
@@ -37,13 +38,21 @@ const getImgSrc = type => {
 };
 
 function CoffeeDrinks() {
-	// TODO make a call to the api
+	const endpoint = 'http://localhost:8080/api/products';
+	const [drinks, setDrinks] = useState([]);
+	
+	useEffect(() => {
+       		fetch(endpoint)
+			   .then((res) => res.json())
+			   .then(json => setDrinks(json.data));
+	}, [])
 
     // Context API in use to share order details between components
 	const { order, setOrder } = useContext(OrderContext);
 
 	return (
-		<section className="drinks-section">
+		<section className="dri
+		nks-section">
             <Navigation />
             <Quotes text="We know how to make you happy" />
 			<h3>Our best coffee drinks</h3>

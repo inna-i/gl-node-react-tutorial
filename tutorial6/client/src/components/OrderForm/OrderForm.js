@@ -58,10 +58,16 @@ export default function OrderForm() {
 					return errors;
 				}}
 				onSubmit={(values, { setSubmitting }) => {
-					setTimeout(() => {
-						alert(JSON.stringify({ ...values, order }, null, 2));
+						console.log(values);
+						const endpoint = 'http://localhost:8080/api/orders';
+						fetch(endpoint, {
+							method: "POST",
+							body: JSON.stringify({ email: values.email, address: values.address, order })
+						});
+					
+						// alert(JSON.stringify({ ...values, order }, null, 2));
 						setSubmitting(false);
-					}, 400);
+					
 				}}
 			>
 				{({ isSubmitting }) => (
@@ -72,7 +78,7 @@ export default function OrderForm() {
 							<ErrorMessage name="email" component="div" />
 						</div>
 						<div className="form-group">
-							<label htmlFor="adress">Address</label>
+							<label htmlFor="address">Address</label>
 							<Field type="address" name="address" />
 							<ErrorMessage name="address" component="div" />
 						</div>
