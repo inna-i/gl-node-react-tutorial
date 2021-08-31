@@ -1,0 +1,30 @@
+.drinks-section {
+    min-height: 300px;
+    padding: 50px 5% 120px;
+}
+
+.drinks-section h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #a2664a;
+}
+
+.drink-item {
+    display: inline-block;
+    max-width: 385px;
+}
+
+.drink-item p {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.drink-item img {
+    width: 100%;
+}
+
+.drink-name span {
+    letter-spacing: 1px;
+    color: #aaa6a6;
+}

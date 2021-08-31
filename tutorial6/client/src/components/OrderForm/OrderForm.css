@@ -1,0 +1,49 @@
+.form-group input {
+    width: 350px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    text-indent: 10px;
+    color: #474545;
+}
+
+.form-group label {
+    position: absolute;
+    top: -3px;
+}
+
+.form-group {
+    position: relative;
+    padding: 20px 0;
+}
+
+.ordered-drinks {
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.ordered-drinks ul {
+    border-bottom: 1px solid #ccc;
+}
+
+.ordered-drinks li {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 15px;
+    position: relative;
+    font-weight: 600;
+}
+
+li .count {
+    position: absolute;
+    right: 0;
+    font-weight: 600;
+    color: #aaa;
+}
+
+.ordered-drinks p {
+    text-align: right;
+    font-weight: 600;
+    color: #a2664a;
+}

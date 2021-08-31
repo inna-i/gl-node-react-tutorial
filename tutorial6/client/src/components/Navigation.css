@@ -1,0 +1,35 @@
+ul.nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	margin: 0;
+	padding: 15px 20px;
+	text-align: right;
+	box-sizing: border-box;
+}
+
+li.nav-item a {
+	position: relative;
+	display: inline-block;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 600;
+	color: #a2664a;
+}
+
+li.nav-item {
+	display: inline-block;
+}
+
+.nav-item a::before {
+	position: absolute;
+	content: '';
+	bottom: 0px;
+	left: calc(50% - 5px);
+	width: 10px;
+	height: 1px;
+	background: #a2664a;
+}
